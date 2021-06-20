@@ -1,0 +1,12 @@
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\bin\Debug\netstandard2.0\TwitterImplementation.deps.json
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\bin\Debug\netstandard2.0\TwitterImplementation.dll
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\bin\Debug\netstandard2.0\TwitterImplementation.pdb
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\obj\Debug\netstandard2.0\TwitterImplementation.csprojAssemblyReference.cache
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\obj\Debug\netstandard2.0\TwitterImplementation.AssemblyInfoInputs.cache
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\obj\Debug\netstandard2.0\TwitterImplementation.AssemblyInfo.cs
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\obj\Debug\netstandard2.0\TwitterImplementation.csproj.CoreCompileInputs.cache
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\obj\Debug\netstandard2.0\TwitterImplementation.dll
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\obj\Debug\netstandard2.0\TwitterImplementation.pdb
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\bin\Debug\netstandard2.0\DBLibrary.dll
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\bin\Debug\netstandard2.0\DBLibrary.pdb
+D:\1 practicals\c# Dot Net Core\Assignment2\TwitterImplementation\obj\Debug\netstandard2.0\TwitterImplementation.csproj.CopyComplete

@@ -1,0 +1,59 @@
+﻿@model TwitterPost
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<div class="PlaceHolder"></div>
+@using (Html.BeginForm("MakeTweet", "Twitter", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="myModal-lable">Make a Tweet</h6>
+                <button type="button" id="btnClose" class="btnClose close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="MakeTweet" enctype="application/x-www-form-urlencoded">
+                    <div class="form-group">
+                        <textarea id="txtArea" class="form-control" maxlength="500" cols="60" rows="8" asp-for="tweet">
+                    </textarea>
+                    <input type="file" id="fileUpload" accept="audio/*,video/*,image/*" asp-for="file" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="btnOk">Post</button>
+                <button type="button" id="btnClose" class="btnClose btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.btnClose').click(function () {
+            location.reload();
+        });
+    });
+
+        @*$('#btnOk').click(function () {
+            var form = $(this).parent().parent().children('.modal-body').find('form');
+            var actionUrl = form.attr('action');
+            var data = form.serialize();
+            debugger;
+            var text = $("#txtArea").val();
+            var files = $("#fileUpload").get(0).files;
+
+            if (files.length > 0) {
+                data2.append("file", files[0]);
+            }
+            data2.append("tweet", text);
+
+            $.post(actionUrl, data2).done(function () {
+                window.alert("Tweet Posted");
+                 var url = '@Url.Action("Index", "Twitter")';
+                 window.location.href = url;
+            });
+        });
+    });*@
+
+
+</script>

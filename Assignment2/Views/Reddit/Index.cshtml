@@ -1,0 +1,129 @@
+﻿@model IEnumerable<RedditImplementation.RedditPost>
+
+@{
+    ViewData["Title"] = "Reddit";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<h3>Reddit Posts</h3>
+
+<p>
+    @*<a asp-action="Create">Create New</a>*@
+    <table cellspacing="10" , cellpadding="10">
+        <tr>
+            <td>
+                <a asp-action="Truncate">Truncate Data</a><br />
+            </td>
+            <td>
+                <a asp-action="GetMyPosts">Get MyPosts</a><br />
+            </td>
+            <td>
+                @using (Html.BeginForm("GetTaggedPost", "Reddit", FormMethod.Post))
+                {
+                    <input type="text" value="Jalpa96164182" name="hashTag" /> <button type="submit">Get SubReddit</button><br />
+                }
+            </td>
+            <td>
+                <button type="button" class="btn-block" data-toggle="modal" id="ClickMe" data-target="#myModal" style="background-color: tomato; font-family:Verdana; color: white;" name="ClickMe">Create Post</button>
+            </td>
+    </table>
+</p>
+<div class="modal fade" id="myModal" role="dialog" data-url='@Url.Action("OpenModelPopup","Reddit")'></div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.btn-block').click(function () {
+            var url = $('#myModal').data('url');
+            $.get(url, function (data) {
+                $("#myModal").html(data);
+                $("#myModal").modal('show');
+            });
+        });
+    });
+</script>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Subreddit
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                Up Votes
+            </th>
+            <th>
+                Upvote Ratio
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                Created Time
+            </th>
+            <th>
+                Down Votes
+            </th>
+            <th>
+                Edited Time
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fullname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Permalink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SelfText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SelfTextHTML)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subreddit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpVotes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UpvoteRatio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Created)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DownVotes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Edited)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fullname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Permalink)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SelfText)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SelfTextHTML)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

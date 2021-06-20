@@ -1,0 +1,123 @@
+﻿@model IEnumerable<TwitterImplementation.Tweet>
+
+@{
+    ViewData["Title"] = "Twitter";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<h3>Twitter Posts</h3>
+
+<p>
+    <table cellspacing="10" , cellpadding="10">
+        <tr>
+            <td>
+                <a asp-action="Truncate">Truncate Data</a><br />
+            </td>
+            <td>
+                <a asp-action="GetMyTweet">Get My Tweets</a><br />
+            </td>
+            <td>
+                <a asp-action="GetMyTimeline">Get My Timeline</a><br />
+            </td>
+            <td>
+                <button type="button" class="btn-block" data-toggle="modal" id="ClickMe" data-target="#myModal" style="background-color:#1DA1F2; font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, , sans-serif; color:white;" name="ClickMe">Tweet it</button>
+            </td>
+    </table>
+    @*<a asp-action="MakeTweet">Tweet Now  !!!</a><br />*@    
+</p>
+<div class="modal fade" id="myModal" role="dialog" data-url='@Url.Action("OpenModelPopup","Twitter")'></div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.btn-block').click(function () {
+            var url = $('#myModal').data('url');
+            $.get(url, function (data) {
+                $("#myModal").html(data);
+                $("#myModal").modal('show');
+            });
+        });
+    });
+</script>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    Tweet Url
+                </th>
+                <th>
+                    Tweet
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Language)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MediaCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RetweetCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReplyCount)
+                </th>
+                <th>
+                    CreatedBy
+                </th>
+                <th>
+                    Created Time
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TweetUrl)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FullText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Language)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MediaCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RetweetCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReplyCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedByName) (@@@Html.DisplayFor(modelItem => item.CreatedByUsername))
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedAt)
+                    </td>
+                    @*<td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>*@
+                </tr>
+            }
+        </tbody>
+        @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+            </script>
+
+        }
+    </table>
+

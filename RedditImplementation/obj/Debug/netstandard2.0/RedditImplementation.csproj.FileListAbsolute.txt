@@ -1,0 +1,14 @@
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\bin\Debug\netstandard2.0\RedditImplementation.deps.json
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\bin\Debug\netstandard2.0\RedditImplementation.dll
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\bin\Debug\netstandard2.0\RedditImplementation.pdb
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\bin\Debug\netstandard2.0\DBLibrary.dll
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\bin\Debug\netstandard2.0\DBLibrary.pdb
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\obj\Debug\netstandard2.0\RedditImplementation.csprojAssemblyReference.cache
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\obj\Debug\netstandard2.0\RedditImplementation.AssemblyInfoInputs.cache
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\obj\Debug\netstandard2.0\RedditImplementation.AssemblyInfo.cs
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\obj\Debug\netstandard2.0\RedditImplementation.csproj.CoreCompileInputs.cache
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\obj\Debug\netstandard2.0\RedditImplementation.csproj.CopyComplete
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\obj\Debug\netstandard2.0\RedditImplementation.dll
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\obj\Debug\netstandard2.0\RedditImplementation.pdb
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\bin\Debug\netstandard2.0\AuthTokenRetrieverLib.dll
+D:\1 practicals\c# Dot Net Core\Assignment2\RedditImplementation\bin\Debug\netstandard2.0\AuthTokenRetrieverLib.pdb
